@@ -10,7 +10,6 @@ public:
     
     Item(string itemName, double itemPrice) : name(itemName), price(itemPrice) {}
     
-    
 };
 /*
 Реализуем проверку продуктов на фактор купленности
