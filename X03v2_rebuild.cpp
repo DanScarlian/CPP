@@ -10,6 +10,7 @@ public:
     
     Item(string itemName, double itemPrice) : name(itemName), price(itemPrice) {}
     
+    
 };
 /*
 Реализуем проверку продуктов на фактор купленности
@@ -21,9 +22,8 @@ bool nakoplenie(int spisok, int index) {
 }
 
 double Bonusnaya(const vector<Item>& items, int spisok, double& BonusBalance) { // Расчитываем бонусы и траты
-    double PlotiteNalog = 0.0; // Итог к оплате
-    BonusBalance = 0.0; // Зачисляем бонусы
-    double NashBalance = 0.0; // По умолчанию без бонусов 
+    double PlotiteNalog = 0.0; 
+    BonusBalance = 0.0; 
 
     for (int i=0; i<items.size(); i++) {
         if (nakoplenie(spisok, i)) {
@@ -35,7 +35,7 @@ double Bonusnaya(const vector<Item>& items, int spisok, double& BonusBalance) { 
     return PlotiteNalog;
 }
 
-void TotalShopMadness(const vector<Item> & items) {
+void TotalShopMadness(const vector<Item> & items) { //Магия Void - то что входит в него, не "возвращается"
     int sdvig = items.size();
 
     for (int spisok = 1; spisok < (1<<sdvig) -1; ++spisok) {
