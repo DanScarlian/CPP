@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string> 
+#include <limits> //Из-за её отсутствия код не компилировался
 using namespace std;
 
 class Item {
